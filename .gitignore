@@ -1,0 +1,9 @@
+*.pl
+!ggp.extensions.pl
+*.ggp
+*.o
+*.lp
+*.out
+*.txt
+games/*.kif
+tags

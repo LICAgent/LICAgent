@@ -1,0 +1,62 @@
+#==============================================================================
+
+bool SLOG_OUTPUT TRUE
+bool SLOG_REDIRECT false
+string SLOG_REDIRECT_FILE output.txt
+
+#==============================================================================
+
+#in src/player/mcts.cc & src/player/mcts_node.cc
+bool MCTS_PROFILE true
+string MCTS_PROFILE_OUTPUT stats.txt
+
+bool MCTS_USE_TT true
+bool MCTS_USE_ZOBRIST true
+
+bool MCTS_LIMIT_NODE false
+int MCTS_NODE_MAX_COUNT 3000000
+
+bool MCTS_USE_UCB_TUNE true
+
+#RAVE
+bool MCTS_USE_RAVE true
+int MCTS_RAVE_THRESHOLD 50
+#only used when both REGRESS and RAVE are used
+double MCTS_RAVE_WEIGHT 0.5
+
+#REGRESS
+bool MCTS_USE_REGRESS false
+int MCTS_REG_THRESHOLD 50
+int MCTS_REG_COM_THRESHOLD 130
+#only used when both REGRESS and RAVE are used
+double MCTS_REG_WEIGHT 0.5
+
+#MAST
+bool MCTS_USE_MAST false
+double MCTS_MAST_SIGMA 1.5
+
+int MCTS_PRUNE_FREQ 2
+
+double MCTS_TIME_BUFFER 3.5
+
+double MCTS_GAMMA 1.0
+
+#Cp in UCT
+double MCTS_CP 0.8
+
+#how much proportion of playtime can each default policy run use
+double MCTS_DPmax 0.2
+
+double MCTS_DIST_WEIGHT 1.1
+
+#==============================================================================
+
+#in src/agent/agent.cc
+bool TRY_CLASP_PLAYER true
+string CLASP_FILE_DIR asp/
+double CLASP_TIME_LIMIT 10.0
+
+int PROPNET_FLATTEN_TIMEOUT 10
+bool PROPNET_MULTITHREAD true
+
+int MCTS_NUM_THREADS 1
